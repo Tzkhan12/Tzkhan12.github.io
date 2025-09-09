@@ -2,27 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Tool Website</title>
-  <meta name="description" content="Simple tool website demo">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Stylish Website</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>My Tool Website</h1>
-    <p>یہاں میں اپنا ٹول ڈالوں گا۔</p>
-  </header>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h2 class="logo">MySite</h2>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
-  <main>
-    <section>
-      <h2>Tool Area</h2>
-      <textarea id="inputText" placeholder="Type here..." style="width:100%;height:100px"></textarea><br>
-      <button id="runBtn">Run Tool</button>
-      <p id="output"></p>
-    </section>
-  </main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to My Website 🎉</h1>
+    <p>Hosted on <b>GitHub Pages</b></p>
+    <button id="clickBtn">Explore More</button>
+    <p id="message"></p>
+  </section>
 
+  <!-- Cards Section -->
+  <section class="cards">
+    <div class="card">
+      <h3>🚀 Fast</h3>
+      <p>Super fast loading and responsive design.</p>
+    </div>
+    <div class="card">
+      <h3>🎨 Stylish</h3>
+      <p>Modern and clean UI for a better look.</p>
+    </div>
+    <div class="card">
+      <h3>⚡ Free</h3>
+      <p>Completely free hosting on GitHub Pages.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2025 My Website</p>
+    <p>© 2025 My Website | Made with ❤️ on GitHub Pages</p>
   </footer>
 
   <script src="script.js"></script>
