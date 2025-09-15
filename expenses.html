@@ -1,58 +1,53 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Expenses Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Stylish Website</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h2 class="logo">MySite</h2>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
-  <div class="expense-container">
-    <h2>Expenses Calculator</h2>
-    <input type="number" id="amount" placeholder="Enter amount" />
-    <select id="category">
-      <option value="">Select category</option>
-      <option value="Food">Food</option>
-      <option value="Transport">Transport</option>
-      <option value="Bills">Bills</option>
-      <option value="Shopping">Shopping</option>
-      <option value="Other">Other</option>
-    </select>
-    <button onclick="addExpense()">Add Expense</button>
-    <div class="result" id="result"></div>
-  </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to My Website 🎉</h1>
+    <p>Hosted on <b>GitHub Pages</b></p>
+    <button id="clickBtn">Explore More</button>
+    <p id="message"></p>
+  </section>
 
-  <script>
-    let expenses = [];
+  <!-- Cards Section -->
+  <section class="cards">
+    <div class="card">
+      <h3>🚀 Fast</h3>
+      <p>Super fast loading and responsive design.</p>
+    </div>
+    <div class="card">
+      <h3>🎨 Stylish</h3>
+      <p>Modern and clean UI for a better look.</p>
+    </div>
+    <div class="card">
+      <h3>⚡ Free</h3>
+      <p>Completely free hosting on GitHub Pages.</p>
+    </div>
+  </section>
 
-    function addExpense() {
-      const amount = document.getElementById('amount').value;
-      const category = document.getElementById('category').value;
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 My Website | Made with ❤️ on GitHub Pages</p>
+  </footer>
 
-      if(amount === '' || category === '') {
-        alert('Please enter both amount and category');
-        return;
-      }
-
-      expenses.push({amount: parseFloat(amount), category});
-
-      let summary = '';
-      const totals = {};
-
-      expenses.forEach(exp => {
-        if(!totals[exp.category]) totals[exp.category] = 0;
-        totals[exp.category] += exp.amount;
-      });
-
-      for(const cat in totals){
-        summary += `${cat}: $${totals[cat].toFixed(2)}<br>`;
-      }
-
-      document.getElementById('result').innerHTML = summary;
-
-      document.getElementById('amount').value = '';
-      document.getElementById('category').value = '';
-    }
-  <
+  <script src="script.js"></script>
 </body>
 </html>
